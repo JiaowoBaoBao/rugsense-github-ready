@@ -1,5 +1,9 @@
 # RugSense v3.1
 
+![Node](https://img.shields.io/badge/node-%3E%3D18-339933?logo=node.js&logoColor=white)
+![Last Commit](https://img.shields.io/github/last-commit/JiaowoBaoBao/rugsense-github-ready)
+![License](https://img.shields.io/badge/license-not%20specified-lightgrey)
+
 RugSense v3.1 is a runnable MVP implementing your latest design:
 
 - **3 analysis agents** (TechGuard / OnChainWhale / SentimentHunter)
