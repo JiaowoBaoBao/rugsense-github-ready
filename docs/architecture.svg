@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="920" viewBox="0 0 1400 920">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,5 L0,10 z" fill="#8ab4f8"/>
+    </marker>
+    <style>
+      .bg { fill:#0b1220; }
+      .box { fill:#16213a; stroke:#3f5f99; stroke-width:2; rx:12; }
+      .txt { fill:#e6edf3; font-family:Arial, sans-serif; font-size:18px; }
+      .sub { fill:#a9b8d0; font-family:Arial, sans-serif; font-size:14px; }
+      .line { stroke:#8ab4f8; stroke-width:2.5; fill:none; marker-end:url(#arrow); }
+      .title { fill:#ffffff; font-family:Arial, sans-serif; font-size:30px; font-weight:bold; }
+    </style>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="1400" height="920"/>
+  <text class="title" x="40" y="52">RugSense Architecture (Simulation-First Closed Loop)</text>
+
+  <rect class="box" x="60" y="110" width="240" height="100"/>
+  <text class="txt" x="82" y="150">Collector Layer</text>
+  <text class="sub" x="82" y="176">Launchpad + Market Signals</text>
+
+  <rect class="box" x="360" y="110" width="300" height="100"/>
+  <text class="txt" x="382" y="150">3 Analysis Agents</text>
+  <text class="sub" x="382" y="176">TechGuard / OnChainWhale / SentimentHunter</text>
+
+  <rect class="box" x="720" y="110" width="240" height="100"/>
+  <text class="txt" x="742" y="150">Vote Engine</text>
+  <text class="sub" x="742" y="176">3 Agent + 2 User Votes</text>
+
+  <rect class="box" x="1020" y="110" width="300" height="100"/>
+  <text class="txt" x="1042" y="150">Decision Gate</text>
+  <text class="sub" x="1042" y="176">Hard Filters + Majority Rule</text>
+
+  <rect class="box" x="940" y="300" width="360" height="110"/>
+  <text class="txt" x="962" y="342">Path A: Simulation Execution</text>
+  <text class="sub" x="962" y="368">Open / Monitor / Auto-Close</text>
+
+  <rect class="box" x="520" y="300" width="360" height="110"/>
+  <text class="txt" x="542" y="342">Path B: 15m Verifier</text>
+  <text class="sub" x="542" y="368">NO_TRADE -> RUG_TRUE / RUG_FALSE</text>
+
+  <rect class="box" x="520" y="470" width="360" height="110"/>
+  <text class="txt" x="542" y="512">Reward Settlement</text>
+  <text class="sub" x="542" y="538">x402 or Direct Transfer Mode</text>
+
+  <rect class="box" x="520" y="640" width="360" height="110"/>
+  <text class="txt" x="542" y="682">Yield Agent</text>
+  <text class="sub" x="542" y="708">Guardrails + Allocation + Risk Exit</text>
+
+  <rect class="box" x="940" y="640" width="360" height="110"/>
+  <text class="txt" x="962" y="682">Adaptation Layer</text>
+  <text class="sub" x="962" y="708">Backtest / Fitness / Fingerprints</text>
+
+  <rect class="box" x="60" y="640" width="380" height="110"/>
+  <text class="txt" x="82" y="682">Dashboard + API + Reports</text>
+  <text class="sub" x="82" y="708">SSE UI / Demo Endpoints / Export</text>
+
+  <path class="line" d="M300 160 L360 160"/>
+  <path class="line" d="M660 160 L720 160"/>
+  <path class="line" d="M960 160 L1020 160"/>
+
+  <path class="line" d="M1170 210 L1170 300"/>
+  <path class="line" d="M1040 210 L760 300"/>
+
+  <path class="line" d="M700 410 L700 470"/>
+  <path class="line" d="M700 580 L700 640"/>
+
+  <path class="line" d="M1120 410 L1120 640"/>
+  <path class="line" d="M880 695 L940 695"/>
+
+  <path class="line" d="M520 695 L440 695"/>
+  <path class="line" d="M940 695 L440 695"/>
+
+  <text class="sub" x="1178" y="270">SIM_BUY</text>
+  <text class="sub" x="905" y="276">NO_TRADE</text>
+</svg>

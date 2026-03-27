@@ -1,0 +1,114 @@
+{
+  "app": {
+    "port": 3781
+  },
+  "runtime": {
+    "demoMode": false,
+    "verificationDelayMs": 900000,
+    "collectorIntervalMs": 300000,
+    "positionWatchIntervalMs": 15000,
+    "evolutionIntervalMs": 43200000,
+    "autoAnalyze": {
+      "enabled": true,
+      "intervalMs": 300000,
+      "candidatesPerRun": 3,
+      "launchpadFetchLimit": 20,
+      "ageMaxSec": 7200,
+      "minLiquidityUsd": 1000,
+      "hideHighRisk": false,
+      "allowDegraded": false,
+      "allowSyntheticCandidates": false,
+      "candidateCooldownMs": 300000,
+      "userVotes": ["NO_BUY", "NO_BUY"],
+      "orderPct": 1,
+      "tickMs": 30000
+    }
+  },
+  "simulation": {
+    "totalCapitalUsdc": 10000,
+    "defaultOrderPct": 1,
+    "stopLossPct": -8,
+    "takeProfitPct": 12,
+    "maxHoldMinutes": 360,
+    "softRugDropPct15m": -35,
+    "riskExitScore": 75,
+    "minLiquidityUsd": 20000,
+    "minLiquidityUsdByChain": {
+      "sol": 1000
+    },
+    "maxSlippagePct": 3,
+    "maxSlippagePctByChain": {
+      "sol": 3
+    }
+  },
+  "reward": {
+    "x402AmountUsdc": 0.001,
+    "dailyRewardCapCount": 30,
+    "tokenCooldownHours": 24,
+    "paymentMode": "DIRECT_TRANSFER",
+    "directTransfer": {
+      "network": "eip155:8453",
+      "chainId": 8453,
+      "rpcUrl": "https://mainnet.base.org",
+      "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      "toAddress": "",
+      "useKeychain": true,
+      "keychainService": "rugsense.wallet.mnemonic",
+      "keychainAccount": "rugsense-wallet",
+      "fromDerivationPath": "m/44'/60'/0'/0/0",
+      "toDerivationPath": "m/44'/60'/0'/0/1",
+      "privateKey": "",
+      "privateKeyFile": "",
+      "privateKeyEnv": "RUGSENSE_DIRECT_TRANSFER_PRIVATE_KEY",
+      "amountBaseUnits": 1000,
+      "dryRun": true
+    },
+    "x402": {
+      "url": "http://localhost:3781/api/x402/reward",
+      "internalEndpoint": "http://localhost:3781/api/x402/reward",
+      "method": "POST",
+      "network": "eip155:8453",
+      "asset": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+      "payTo": "",
+      "verifyMode": "mock",
+      "security": {
+        "requireAuth": false,
+        "authHeader": "x-rugsense-token",
+        "authToken": ""
+      }
+    }
+  },
+  "yield": {
+    "killSwitch": false,
+    "allocationMode": "reward_only",
+    "balanceReinvestPct": 0,
+    "balanceReinvestCapPct": 0,
+    "minApyPct": 3,
+    "singleOrderCapPct": 3,
+    "dailyNewExposureCapPct": 10,
+    "perProtocolExposureCapPct": 20,
+    "riskTvlDropExitPct1h": 20,
+    "riskScoreJumpExit": 25,
+    "riskAbsoluteExitScore": 88,
+    "riskConsecutiveHitsExit": 2
+  },
+  "bitget": {
+    "baseUrl": "https://copenapi.bgwapi.io",
+    "reliability": {
+      "timeoutMs": 9000,
+      "retries": 2,
+      "retryBackoffMs": 350,
+      "retryMaxBackoffMs": 5000,
+      "retryJitterMs": 250,
+      "circuitBreakerFailures": 4,
+      "circuitBreakerCooldownMs": 45000
+    },
+    "headers": {
+      "channel": "toc_agent",
+      "brand": "toc_agent",
+      "clientversion": "10.0.0",
+      "language": "en",
+      "token": "toc_agent"
+    }
+  }
+}

@@ -1,0 +1,10 @@
+node_modules/
+.DS_Store
+npm-debug.log*
+.env
+.env.local
+.env.*.local
+demo-artifacts/
+data/*.json
+data/.scheduler.leader.lock
+!data/.gitkeep

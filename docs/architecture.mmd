@@ -1,0 +1,22 @@
+flowchart TD
+  A[Collector\nLaunchpad + Market Signals] --> B[3 Analysis Agents\nTechGuard / OnChainWhale / SentimentHunter]
+  B --> C[Vote Engine\n3 Agent Votes + 2 User Votes]
+  C --> D{Decision}
+
+  D -->|SIM_BUY| E[Simulation Execution\nOpen / Monitor / Close]
+  D -->|NO_TRADE| F[15m Verifier]
+
+  F -->|RUG_TRUE| G[Reward Settlement\nx402 / Direct Transfer Mode]
+  G --> H[Yield Agent\nGuardrailed Deployment]
+
+  E --> I[Backtest + Metrics]
+  F --> I
+  H --> I
+
+  I --> J[Evolution Engine\nFitness + Replacement]
+  I --> K[Fraud Fingerprints\n+ Shadow Graph]
+
+  J --> L[Dashboard + API + Reports]
+  K --> L
+  E --> L
+  H --> L

@@ -1,0 +1,17 @@
+{
+  "name": "rugsense-v3",
+  "version": "3.1.0",
+  "description": "RugSense v3.1 - Vote-to-Trade simulation with Yield Agent and visual dashboard",
+  "main": "src/index.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node src/index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
